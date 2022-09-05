@@ -39,8 +39,8 @@ global.autoReadAll = false
 global.antitags = true
 
 
-global.Owner = ['94775200935']
-global.OwnerNumber = ['94775200935']
+global.Owner = ['94717632669']
+global.OwnerNumber = ['94717632669']
 global.ownertag = ['94775200935']
 global.BotName = "Queen-MD Bot"
 global.packname = "Queen Bot"
