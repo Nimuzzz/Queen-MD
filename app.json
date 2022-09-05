@@ -1,0 +1,24 @@
+{
+  "name": "Queen-MD",
+  "description": "A whatsApp bot with Multi Device support",
+  "repository": "https://github.com/FantoX001/Miku-MD",
+  "logo": "https://i.ibb.co/3mL4HwL/Queen-MD.jpg",
+  "keywords": ["nodejs", "bot", "whatsapp bot", "whatsapp automation", "multi device"],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    },
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+    },
+    {
+      "url": "https://github.com/clhuang/heroku-buildpack-webp-binaries.git"
+    }
+  ],
+   "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    }
+}
