@@ -58,7 +58,7 @@ global.location = "Galle,Sri Lanka"
 global.reactmoji = "❤️"
 global.themeemoji = "💖"
 global.vidmenu = { url: 'https://c.tenor.com/YGuLegQWubwAAAPo/miku-nakano-gotoubun-no-hanayome.mp4' }
-global.websitex = "https://github.com/DarkWinzo
+global.websitex = "https://github.com/DarkWinzo"
 global.lolhuman = "KaysaS"
 
 
