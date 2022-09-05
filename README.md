@@ -12,6 +12,8 @@
     <img src="https://img.shields.io/github/forks/DarkWinzo/Queen-MD?label=Fork&style=social">
     
     
+    [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/DarkWinzo/Bosco-MD/)
+    
   <a href="https://github.com/DarkWinzo/Queen-MD/stargazers">
     <img src="https://img.shields.io/github/stars/DarkWinzo/Queen-MD?style=social">
   </a>
