@@ -4829,90 +4829,251 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
       
- const helpmenu = `Konichiwa *${pushname}* Senpai,
+ const helpmenu = `හලෝ *${pushname} මිත්‍රයා* ,
 
-I am *Queen*, a bot developed by *DarkWinzo*.
+▍මම *Queen* Whatsapp රොබෝ කෙනෙක්, මාව නිර්මාණය කලේ *DarkWinzo*. 
+▍
+▍🙇🏻‍♀️මම සෑම විටම සාමාන්‍ය මිනිසෙක් තරම් සරල වීමට උත්සාහ කරනවා🙇🏻‍♀️
 
-🔰 My prefix is:  ${prefix}
-
-Here's the list of Queen-MD Commands.
-
-
- 
- *━━━〈  🎆 Core 🎆  〉━━━*
-
-Queen, stalk, profile, help, delete, deleteall, listgc, listpc, welcome, support, repo, script 
- 
- *━━━〈  🎀 Owner 🎀  〉━━━*
-
-self, public, ban, bangroup, bye, join, bye, block, unblock, broadcast 
-
- *━━━〈  ⭕ Group ⭕  〉━━━*
- 
-promote, demote, revoke, remove, tagall, hidetag, groupsetting, grouplink, setgcpp, setname, setdesc, group, nsfw 
-
- *━━━〈  ➰ Anti Link ➰  〉━━━*
- 
-antilinkgc, antilinktg, antilinktt, antilinkytch, antilinkytvid, antilinkig, antilinkfb, antilinktwit, antilinkall, antiwame
-
- *━━━〈  🔍 Search 🔍  〉━━━*
-
-play, song, yts, lyrics, google, gimage, pinterest, image, movie, wallpaper, searchgc, happymod, wikimedia, ringtone, anime, animestory, manga, ringtone  
-
- *━━━〈  🔰 Convert 🔰  〉━━━*
-
-sticker, toimg, tovideo, togif , steal, stickermeme, emojimix, tourl, tomp3, toaudio
-
- *━━━〈  🔉 Audio 🔉  〉━━━*
-
-bass, tempo, blown, deep, earrape, fast, fat, nightcore, reverse, robot, slow, squirrel
-
- *━━━〈  📍 Reactions 📍  〉━━━*
-
-bonk, cry, bully, cuddle, hug, kiss, lick, pat, smug, yeet, blush, smile, wave, highfive, handhold, nom, glomp, bite, slap, kill, happy, wink, poke, dance, cringe
-
- *━━━〈  🌌 Downloader 🌌  〉━━━*
-
-play, ytmp3, ytmp4, ytvideo, mediafire, instagram, igtv, facebook, fbmp3, twitter, twittermp3, tiktok, tiktokaudio, tiktoknowm, mediafire  
-
- *━━━〈  🈴 Weeb 🈴  〉━━━*
-
-crosplay, waifu, loli, neko, ppcouple, feed, foxgirl, feed, meow, tickle, wallpaper, coffee, animenom, waifu3, neko2, feed, meow, tickle, migumin, awoo, animewallpaper2, anime, manga
-
- *━━━〈  ♨️ Informative ♨️  〉━━━*
-
-animequote, quote, covid, earthquake, wiki
-
- *━━━〈  🎗 Others 🎗  〉━━━*
-
-stickermeme, quotes, darkjoke 
-
- *━━━〈  🎐 Fun 🎐  〉━━━*
-
-reaction, truth, dare, couple, soulmate, handsomecheck, beautifulcheck, awesomecheck, greatcheck, gaycheck, cutecheck, lesbiancheck, hornycheck, prettycheck, lovelycheck, uglycheck, charactercheck
-
- *━━━〈  🪁 Essentials 🪁  〉━━━*
-
-translate, fliptext, toletter
-
- *━━━〈  💥 NSFW 💥  〉━━━*
-
-🍁 Type " *${prefix}nsfw* " then enable NSFW (Admin only!) 
-
-🍁 Then type " *${prefix}nsfwmenu* " to get full list of NSFW commands.
-
-
-
-
- 『  *${global.BotName}*  』
- Powered by: *Queen Bot*
-
- 🔰 මෙම ඕනෑම විධානයක් භාවිතා කිරීමට මෙසේ ටයිප් කරන්න 
- " *${prefix}<Command name>* ".
- 
- 🔰 Support කණ්ඩායම් සබැඳිය ලබා ගැනීමට " *${prefix}support* ".
-
- 🔰 සම්පූර්ණ විධාන ලැයිස්තුව ලබා ගැනීමට" *${prefix}help* "ටයිප් කරන්න .`
+▍🔰මාගේ සෑම විධානයක් ඉදිරියටම ${prefix} මෙම සලකුණ යොදන්න.
+▍
+▍මෙන්න Queen-MD විධාන ලැයිස්තුව.
+▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+▍
+▍ *━━━〈  📱 Core 📱  〉━━━*
+▍
+▍⌨ Queen
+▍⌨ stalk
+▍⌨ profile
+▍⌨ help
+▍⌨ delete
+▍⌨ deleteall
+▍⌨ listgc
+▍⌨ listpc
+▍⌨ welcome
+▍⌨ support
+▍⌨ repo
+▍⌨ script 
+▍
+▍ *━━━〈  🎀 Owner 🎀  〉━━━*
+▍
+▍🎀 self
+▍🎀 public
+▍🎀 ban
+▍🎀 bangroup
+▍🎀 bye
+▍🎀 join
+▍🎀 bye
+▍🎀 block
+▍🎀 unblock
+▍🎀 broadcast 
+▍
+▍ *━━━〈  ⭕ Group ⭕  〉━━━*
+▍
+▍⭕ promote
+▍⭕ demote
+▍⭕ revoke
+▍⭕ remove
+▍⭕ tagall
+▍⭕ hidetag
+▍⭕ groupsetting
+▍⭕ grouplink
+▍⭕ setgcpp
+▍⭕ setname
+▍⭕ setdesc
+▍⭕ group
+▍⭕ nsfw 
+▍
+▍ *━━━〈  🔗 Anti Link 🔗  〉━━━*
+▍
+▍⚙️ antilinkgc  
+▍⚙️ antilinktg  
+▍⚙️ antilinktt  
+▍⚙️ antilinkytch  
+▍⚙️ antilinkytvid  
+▍⚙️ antilinkig  
+▍⚙️ antilinkfb  
+▍⚙️ antilinktwit  
+▍⚙️ antilinkall  
+▍⚙️ antiwame
+▍
+▍ *━━━〈  🔎 Search 🔍  〉━━━*
+▍
+▍🔎 play
+▍🔎 song
+▍🔎 yts
+▍🔎 lyrics
+▍🔎 google
+▍🔎 gimage
+▍🔎 pinterest
+▍🔎 image
+▍🔎 movie
+▍🔎 wallpaper
+▍🔎 searchgc
+▍🔎 happymod
+▍🔎 wikimedia
+▍🔎 ringtone
+▍🔎 anime
+▍🔎 animestory
+▍🔎 manga
+▍🔎 ringtone  
+▍
+▍ *━━━〈  ♻️ Convert ♻️  〉━━━*
+▍
+▍♻️ sticker
+▍♻️ toimg
+▍♻️ tovideo
+▍♻️ togif 
+▍♻️ steal
+▍♻️ stickermeme
+▍♻️ emojimix
+▍♻️ tourl
+▍♻️ tomp3
+▍♻️ toaudio
+▍
+▍ *━━━〈  🔊 Audio 🔊  〉━━━*
+▍
+▍❖ bass
+▍❖ tempo
+▍❖ blown
+▍❖ deep
+▍❖ earrape
+▍❖ fast
+▍❖ fat
+▍❖ nightcore
+▍❖ reverse
+▍❖ robot
+▍❖ slow
+▍❖ squirrel
+▍
+▍ *━━━〈  🧚🏼‍♀️ Reactions 🧚🏼‍♀️  〉━━━*
+▍
+▍🧚🏼‍♀️ bonk
+▍🧚🏼‍♀️ cry
+▍🧚🏼‍♀️ bully
+▍🧚🏼‍♀️ cuddle
+▍🧚🏼‍♀️ hug
+▍🧚🏼‍♀️ kiss
+▍🧚🏼‍♀️ lick
+▍🧚🏼‍♀️ pat
+▍🧚🏼‍♀️ smug
+▍🧚🏼‍♀️ yeet
+▍🧚🏼‍♀️ blush
+▍🧚🏼‍♀️ smile
+▍🧚🏼‍♀️ wave
+▍🧚🏼‍♀️ highfive
+▍🧚🏼‍♀️ handhold
+▍🧚🏼‍♀️ nom
+▍🧚🏼‍♀️ glomp
+▍🧚🏼‍♀️ bite
+▍🧚🏼‍♀️ slap
+▍🧚🏼‍♀️ kill 
+▍🧚🏼‍♀️ happy 
+▍🧚🏼‍♀️ wink
+▍🧚🏼‍♀️ poke
+▍🧚🏼‍♀️ dance 
+▍🧚🏼‍♀️ cringe
+▍
+▍ *━━━〈  📥 Downloader 📥 〉━━━*
+▍
+▍❖ play
+▍📥 ytmp3
+▍📥 ytmp4
+▍📥 ytvideo
+▍📥 mediafire
+▍📥 instagram
+▍📥 igtv
+▍📥 facebook
+▍📥 fbmp3
+▍📥 twitter
+▍📥 twittermp3
+▍📥 tiktok
+▍📥 tiktokaudio
+▍📥 tiktoknowm
+▍📥 mediafire  
+▍
+▍ *━━━〈 📷 Weeb 📷 〉━━━*
+▍
+▍📷 crosplay 
+▍📷 waifu
+▍📷 loli
+▍📷 neko
+▍📷 ppcouple
+▍📷 feed
+▍📷 foxgirl
+▍📷 feed
+▍📷 meow
+▍📷 tickle
+▍📷 wallpaper
+▍📷 coffee
+▍📷 animenom
+▍📷 waifu3
+▍📷 neko2
+▍📷 feed
+▍📷 meow
+▍📷 tickle
+▍📷 migumin
+▍📷 awoo
+▍📷 animewallpaper2
+▍📷 anime 
+▍📷 manga
+▍
+▍ *━━━〈  🌎 Informative 🌎  〉━━━*
+▍
+▍🌎 animequote
+▍🌎 quote
+▍🌎 covid
+▍🌎 earthquake
+▍🌎 wiki
+▍
+▍ *━━━〈  📌 Others 📌  〉━━━*
+▍ 
+▍📌 stickermeme
+▍📌 quotes
+▍📌 darkjoke 
+▍
+▍ *━━━〈  👻 Fun 👻  〉━━━*
+▍
+▍👻 reaction
+▍👻 truth
+▍👻 dare
+▍👻 couple
+▍👻 soulmate
+▍👻 handsomecheck
+▍👻 beautifulcheck
+▍👻 awesomecheck
+▍👻 greatcheck
+▍👻 gaycheck
+▍👻 cutecheck
+▍👻 lesbiancheck
+▍👻 hornycheck
+▍👻 prettycheck
+▍👻 lovelycheck
+▍👻 uglycheck
+▍👻 charactercheck
+▍
+▍ *━━━〈  🚀 Essentials 🚀  〉━━━*
+▍
+▍🚀 translate
+▍🚀 fliptext
+▍🚀 toletter
+▍
+▍ *━━━〈  💥 NSFW 💥  〉━━━*
+▍
+▍❖ 🍁" *${prefix}nsfw* "ටයිප් කර  NSFW සබල කරන්න (පරිපාලක  සදහා පමණි!)
+▍❖ 🍁  ඉන්පසු NSFW විධානවල සම්පූර්ණ ලැයිස්තුව ලබා ගැනීමට " *${prefix}nsfwmenu* " ටයිප් කරන්න.
+▍
+▍
+▍      💖 *${global.BotName}*  💖
+▍ Powered by:       
+▍*🎀Ｑｕｅｅｎ－ＭＤ Ｂｏｔ🎀 : ＤａｒｋＷｉｎｚｏ*
+▍▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+▍📖 මෙම ඕනෑම විධානයක් භාවිතා කිරීමට මෙසේ ටයිප් කරන්න 
+▍      " *${prefix}<විධානය>* ".
+▍ 
+▍📖 Support කණ්ඩායම් සබැඳිය ලබා ගැනීමට " *${prefix}support* ".
+▍
+▍📖 සම්පූර්ණ විධාන ලැයිස්තුව ලබා ගැනීමට" *${prefix}help* "ටයිප් කරන්න .`
     
 
  let buttonshelpm = [
