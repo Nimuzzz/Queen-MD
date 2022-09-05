@@ -240,10 +240,10 @@ const isQuotedAudio = m.mtype === 'extendedTextMessage' && content.includes('aud
 
 
 
-// DM chatbot
+
 
 if (!isCmd && !m.isGroup){
-    const botreply = await axios.get(`http://api.brainshop.ai/get?bid=168758&key=Ci7eNhtxpxxDB5FQ&uid=[uid]&msg=[${budy}]`)
+    const botreply = await axios.get(`http://api.brainshop.ai/get?bid=169034&key=6nixSdc1SEXmKlLi&uid=[uid]&msg=[${budy}]`)
     txt = `${botreply.data.cnt}`
     m.reply(txt)
     }
