@@ -1530,7 +1530,7 @@ case 'support': case 'supportgc':
 
 case 'repo': case 'botrepo':
     
-    reply(`*My Source Code:* https://github.com/DarkWinzo001/Queen-MD`)
+    reply(`*My Source Code:* https://github.com/DarkWinzo/Queen-MD`)
     break
 
 case 'nsfwmenu':
