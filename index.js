@@ -128,16 +128,16 @@ Queen.ev.on('groups.update', async pea => {
         if (pea[0].announce == true) {
       
 
-        Queen.sendMessage(m.chat, { image: wm_fatih, caption: 'Grop has been *Closed!* Only *Admins* can send Messages!'})
+        Queen.sendMessage(m.chat, { image: wm_fatih, caption: 'Group එක *වසා ඇත!* පණිවිඩ යැවිය හැක්කේ *පරිපාලකයින්ට* පමණි!'})
         } else if(pea[0].announce == false) {
       
-       Queen.sendMessage(m.chat, { image: wm_fatih, caption: 'Grop has been *Opened!* Now *Everyone* can send Messages!'})
+       Queen.sendMessage(m.chat, { image: wm_fatih, caption: 'Group එක *විවෘත කර ඇත!* දැන් *සෑම කෙනෙකුටම* පණිවිඩ යැවිය හැක!'})
         } else if (pea[0].restrict == true) {
         
-        Queen.sendMessage(m.chat, { image: wm_fatih, caption: 'Group Info modification has been *Restricted*, Now only *Admins* can edit Group Info !'})
+        Queen.sendMessage(m.chat, { image: wm_fatih, caption: 'කණ්ඩායම් තොරතුරු වෙනස් කිරීම *සීමා කර ඇත*, දැන් *පරිපාලකයින්ට* පමණක් කණ්ඩායම් තොරතුරු සංස්කරණය කළ හැක !'})
         } else if (pea[0].restrict == false) {
        
-        Queen.sendMessage(m.chat, { image: wm_fatih, caption: 'Group Info modification has been *Un-Restricted*, Now only *Everyone* can edit Group Info !'})
+        Queen.sendMessage(m.chat, { image: wm_fatih, caption: 'කණ්ඩායම් තොරතුරු වෙනස් කිරීම *සීමා රහිත* කර ඇත, දැන් *සෑම කෙනෙකුටම* කණ්ඩායම් තොරතුරු සංස්කරණය කළ හැක !'})
         } else {
         
         Queentextddfq =`Group Subject යාවත්කාලීන කර ඇත ලෙස:\n\n*${pea[0].subject}*`
