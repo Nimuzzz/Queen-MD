@@ -1525,12 +1525,12 @@ break
 
 case 'support': case 'supportgc':
     
-    reply(`*My developer's group:* https://chat.whatsapp.com/IWvaZWObbJK0Dr64WQdGqO`)
+    reply(`*මගේ සංවර්ධක කණ්ඩායම:* https://chat.whatsapp.com/IWvaZWObbJK0Dr64WQdGqO`)
     break
 
 case 'repo': case 'botrepo':
     
-    reply(`*My Source Code:* https://github.com/DarkWinzo/Queen-MD`)
+    reply(`*My Source Code (මගේ මූලාශ්‍ර කේතය):* https://github.com/DarkWinzo/Queen-MD`)
     break
 
 case 'nsfwmenu':
@@ -1565,7 +1565,7 @@ case 'limituser': case 'userlimit': case 'limit':
 case 'ringtone': {
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
-            if (!args.join(" ")) return reply(`Example: ${prefix}ringtone black over`)
+            if (!args.join(" ")) return reply(`උදාහරණයක් ලෙස: ${prefix}ringtone black over`)
         let { ringtone } = require('./lib/scraper')
 		let anu = await ringtone(text)
 		let result = anu[Math.floor(Math.random() * anu.length)]
@@ -1578,12 +1578,12 @@ case 'film': case 'movie': case 'moviesearch':
 if (isBan) return reply(mess.banned)
 	if (isBanChat) return reply(mess.bangc)
 	reply(mess.waiting)
-if (!q) return reply(`කරුණාකර චිත්‍රපට සෙවුම් පදයක් ඇතුළු කරන්න...\nExample: ${prefix}movie Spiderman`)
+if (!q) return reply(`කරුණාකර චිත්‍රපට සෙවුම් පදයක් ඇතුළු කරන්න...\nඋදාහරණයක් ලෙස: ${prefix}movie Spiderman`)
 xfarrapi.Film(q)
     .then(data => {console.log(data)
-    let krl = `*Search Term:* ${q}\n\n`
+    let krl = `*සෙවුම් පදය :* ${q}\n\n`
 			    for (let i of data) {
-                krl += (`-----------------------------------------------------------------------------\n\n\n*Movie Name:* ${i.judul}\n *Quality :* ${i.quality}\n *Type : ${i.type}*\n *Uploaded on :* ${i.upload}\n *Source URL :* ${i.link}\n\n\n`)
+                krl += (`-----------------------------------------------------------------------------\n\n\n*𝗠𝗼𝘃𝗶𝗲 𝗡𝗮𝗺𝗲 :* ${i.judul}\n *𝗤𝘂𝗮𝗹𝗶𝘁𝘆 :* ${i.quality}\n *𝗧𝘆𝗽𝗲 : ${i.type}*\n *𝗨𝗽𝗹𝗼𝗮𝗱𝗲𝗱 𝗼𝗻 :* ${i.upload}\n *𝗦𝗼𝘂𝗿𝗰𝗲 𝗨𝗥𝗟 :* ${i.link}\n\n\n`)
                 }
                Queen.sendMessage(from, { image: { url: data[0].thumb}, caption: krl }, { quoted: fdocs })
 });
@@ -1606,7 +1606,7 @@ let buttons = [
         ]
         let buttonMessage = {
             image: {url:wallpaper[i].image},
-            caption: `*Search term:* ${q}`,
+            caption: `*සෙවුම් පදය:* ${q}`,
             footer: `${BotName}`,
             buttons: buttons,
             headerType: 4
@@ -1628,7 +1628,7 @@ if (isBanChat) return reply(mess.bangc)
         ]
         let buttonMessage = {
             image: { url: hasil.image },
-            caption: `Title : ${hasil.title}\nSource : ${hasil.source}\nMedia Url : ${hasil.image}`,
+            caption: `𝗧𝗶𝘁𝗹𝗲 : ${hasil.title}\n𝗦𝗼𝘂𝗿𝗰𝗲 : ${hasil.source}\n𝗠𝗲𝗱𝗶𝗮 𝗨𝗿𝗹 : ${hasil.image}`,
             footer: `${BotName}`,
             buttons: buttons,
             headerType: 4
@@ -1650,7 +1650,7 @@ case 'quotesanime': case 'quoteanime': case 'animequote': case 'animequotes':{
         let anu = await quotesAnime()
         hasil = anu[Math.floor(Math.random() * anu.length)]
         let buttons = [
-            {buttonId: `-quotesanime`, buttonText: {displayText: '>>'}, type: 1}
+            {buttonId: `-quotesanime`, buttonText: {displayText: 'Next>>'}, type: 1}
         ]
         let buttonMessage = {
             text: `_${hasil.quotes}_\n\nBy '${hasil.karakter}', ${hasil.anime}\n\n- ${hasil.up_at}`,
@@ -1729,9 +1729,9 @@ if (isBanChat) return reply(mess.bangc)
             const sendm =  Queen.sendMessage(
 from, 
 {
-text: "Group Settings",
+text: "Groups සැකසුම්",
 footer: BotName,
-title: "ඔබගේ Group සැකසුම් මෙහි සකසන්න...",
+title: "ඔබගේ  Group සැකසුම් මෙහි සකසන්න...",
 buttonText: "Click Button",
 sections
 }, { quoted : m }
@@ -1758,7 +1758,7 @@ case 'coffee': case 'kopi': {
                     ]
                     let buttonMessage = {
                         image: { url: 'https://coffee.alexflipnote.dev/random' },
-                        caption: `Here is your Coffee...`,
+                        caption: `මෙන්න ඔයාගේ කෝපි එක...`,
                         footer: `${BotName}`,
                         buttons: buttons,
                         headerType: 4
@@ -1772,7 +1772,7 @@ case 'coffee': case 'kopi': {
 case 'emojimix': {
 	   if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)
-if (!q) reply(`*Example :* ${prefix + command} 🦉+🤣`)
+if (!q) reply(`*උදාහරණයක් ලෙස :* ${prefix + command} 🙂+🙁`)
 let [emoji1, emoji2] = q.split`+`
 let kuntuh = await fetchJson(`https://tenor.googleapis.com/v2/featured?key=AIzaSyAyimkuYQYF_FXVALexPuGQctUWRURdCYQ&contentfilter=high&media_filter=png_transparent&component=proactive&collection=emoji_kitchen_v5&q=${encodeURIComponent(emoji1)}_${encodeURIComponent(emoji2)}`)
 for (let res of kuntuh.results) {
@@ -1842,7 +1842,7 @@ await Queen.sendMessage(m.chat, { delete: key })
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  let anu = await store.chats.all().filter(v => v.id.endsWith('.net')).map(v => v)
- let teks = ` 「  Queen's pm user list  」\n\nTotal ${anu.length} users are using Queen in personal chat.`
+ let teks = ` 「  Queen's pm user list  」\n\nසමස්ත ${anu.length} පරිශීලකයන් පුද්ගලික Chat වලදී Queen Bot භාවිතා කරයි.`
  for (let i of anu) {
   teks += `\n\nProfile : @${i.id.split('@')[0]}\nChat : ${i.unreadCount}\nLastchat : ${moment(i.conversationTimestamp * 1000).tz("Asia/Colombo").format("DD/MM/YYYY HH:mm:ss")}`
  }
@@ -1854,7 +1854,7 @@ await Queen.sendMessage(m.chat, { delete: key })
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  let anu = await store.chats.all().filter(v => v.id.endsWith('@g.us')).map(v => v.id)
- let teks = ` 「  Queen's group user list  」\n\nTotal ${anu.length} users are using bot in Groups.`
+ let teks = ` 「  Queen's group user list  」\n\nසමස්ත ${anu.length} පරිශීලකයන් Groups තුළ Queen Bot භාවිතා කරයි.`
  for (let i of anu) {
   let metadata = await Queen.groupMetadata(i)
   if (metadata.owner === "undefined") {
@@ -1874,7 +1874,7 @@ await Queen.sendMessage(m.chat, { delete: key })
  let user = global.db.users[m.sender]
  user.afkTime = + new Date
  user.afkReason = args.join(" ")
- replay(`${m.pushName} is now Away From Keyboard.\nAFK Reason : ${args.join(" ") ? args.join(" ") : ''}`)
+ replay(`${m.pushName} දැන් යතුරුපුවරුවෙන් ඈත්ව සිටී.\nAFK Reason : ${args.join(" ") ? args.join(" ") : ''}`)
  }
  break
 
@@ -1882,21 +1882,21 @@ await Queen.sendMessage(m.chat, { delete: key })
  case 'fliptext': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
- if (args.length < 1) return replay(`Example:\n${prefix}fliptext ${OwnerName}`)
+ if (args.length < 1) return replay(`උදාහරණයක් ලෙස:\n${prefix}fliptext ${OwnerName}`)
  quere = args.join(" ")
  flipe = quere.split('').reverse().join('')
- replay(`\`\`\`「  Text Flipper Tool  」\`\`\`\n*Input text :*\n${quere}\n*Fliped text :*\n${flipe}`)
+ replay(`\`\`\`「  Text Flipper Tool  」\`\`\`\n*ආදාන පෙළ :*\n${quere}\n*පෙරළන ලද පෙළ :*\n${flipe}`)
  }
  break
 
  case 'toletter': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
- if (!Number(args[0])) return replay(`Example:\n${prefix}toletter 956`)
+ if (!Number(args[0])) return replay(`උදාහරණයක් ලෙස:\n${prefix}toletter 956`)
  try {
  quere = args.join(" ")
  convertes = await toHur(quere)
- replay(`\`\`\`「  Word Maker Tool  」\`\`\`\n*Input Number :*\n${quere}\n*Converted Alphabet :*\n${convertes}`)
+ replay(`\`\`\`「  Word Maker Tool  」\`\`\`\n*ආදාන අංකය :*\n${quere}\n*පරිවර්තනය කළ හෝඩිය :*\n${convertes}`)
  } catch {
  replay(`Error!`)
  }
@@ -1907,17 +1907,17 @@ await Queen.sendMessage(m.chat, { delete: key })
  if (isBanChat) return reply(mess.bangc)
  if (!m.isGroup) return replay(mess.grouponly)
  if (!isAdmins && !isCreator) return reply(mess.useradmin)
- if (args.length < 1) return reply('Type on to *Enable*\nType off to *Disable*')
+ if (args.length < 1) return reply('*Enable* කිරීමට on ලෙස ටයිප් කරන්න\n*Disable* කිරීමට off ලෙස ටයිප් කරන්න')
  if (args[0] === 'on'){
- if (isLeveling) return reply(`Already activated`)
+ if (isLeveling) return reply(`*දැනටමත් ක්‍රියාත්මක කර ඇත*`)
  _leveling.push(from)
  fs.writeFileSync('./database/leveling.json', JSON.stringify(_leveling))
- reply('Leveling activated')
+ reply('*Leveling ක්‍රියාත්මක කර ඇත*.')
  } else if (args[0] === 'off'){
  let anu = _leveling.indexOf(from)
  _leveling.splice(anu, 1)
  fs.writeFileSync('./database/leveling.json', JSON.stringify(_leveling))
- reply('Leveling deactivated')
+ reply('*Leveling අක්‍රියයි*')
  } 
  break
 
@@ -1928,27 +1928,27 @@ await Queen.sendMessage(m.chat, { delete: key })
  if (!isBotAdmins) return replay(mess.botadmin)
  if (!isAdmins && !isCreator) return replay(mess.useradmin)
  if (args[0] === "on") {
- if (AntiLink) return replay('Already activated')
+ if (AntiLink) return replay('*දැනටමත් ක්‍රියාත්මක කර ඇත*')
  ntilink.push(from)
- replay('Activated _Antilink_ in this group.')
+ replay('*මෙම සමූහයේ Antilink පද්ධතිය සක්‍රිය කර ඇත.*')
  var groupe = await Queen.groupMetadata(from)
  var members = groupe['participants']
  var mems = []
  members.map(async adm => {
  mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
  })
- Queen.sendMessage(from, {text: `\`\`\`「 Warning 」\`\`\`\n\nAntilink System Activated!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
+ Queen.sendMessage(from, {text: `\`\`\`「 Warning 」\`\`\`\n\n*Antilink පද්ධතිය සක්‍රිය කර ඇත !*`, contextInfo: { mentionedJid : mems }}, {quoted:m})
  } else if (args[0] === "off") {
- if (!AntiLink) return replay('Already deactivated!')
+ if (!AntiLink) return replay('*දැනටමත් අක්‍රීය කර ඇත !*')
  let off = ntilink.indexOf(from)
  ntilink.splice(off, 1)
- replay('Deactivated _Antilink_ in this group!')
+ replay('*මෙම සමූහයේ Antilink පද්ධතිය අක්‍රිය කර ඇත !*')
  } else {
    let buttonsntilink = [
    { buttonId: `-antilinkgc on`, buttonText: { displayText: 'On' }, type: 1 },
    { buttonId: `-antilinkgc off`, buttonText: { displayText: 'Off' }, type: 1 }
    ]
-   await Queen.sendButtonText(m.chat, buttonsntilink, `Please click the button below On / Off`, `${global.BotName}`, m)
+   await Queen.sendButtonText(m.chat, buttonsntilink, `*කරුණාකර on/off කිරීමට පහත බොත්තම ක්ලික් කරන්න*`, `${global.BotName}`, m)
    }
    }
    break
@@ -1961,27 +1961,27 @@ await Queen.sendMessage(m.chat, { delete: key })
  if (!isBotAdmins) return replay(mess.botadmin)
  if (!isAdmins && !isCreator) return replay(mess.useradmin)
  if (args[0] === "on") {
- if (AntiLinkYoutubeVid) return replay('Already activated')
+ if (AntiLinkYoutubeVid) return replay('*දැනටමත් ක්‍රියාත්මක කර ඇත*')
  ntilinkytvid.push(from)
- replay('Activated youtube video antilink !')
+ replay('*යූ ටියුබ් වීඩියෝ  Antilink පද්ධතිය සක්‍රිය කර ඇත !*')
  var groupe = await Queen.groupMetadata(from)
  var members = groupe['participants']
  var mems = []
  members.map(async adm => {
  mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
  })
- Queen.sendMessage(from, {text: `\`\`\`「 Warning 」\`\`\`\n\nAntilink System Activated!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
+ Queen.sendMessage(from, {text: `\`\`\`「 Warning 」\`\`\`\n\n*Antilink පද්ධතිය සක්‍රිය කර ඇත !*`, contextInfo: { mentionedJid : mems }}, {quoted:m})
  } else if (args[0] === "off") {
- if (!AntiLinkYoutubeVid) return replay('Already deactivated')
+ if (!AntiLinkYoutubeVid) return replay('*දැනටමත් අක්‍රීය කර ඇත*')
  let off = ntilinkytvid.indexOf(from)
  ntilinkytvid.splice(off, 1)
- replay('Deactivated youtube video antilink !')
+ replay('*යූ ටියුබ් වීඩියෝ  Antilink පද්ධතිය අක්‍රීය කර ඇත !*')
  } else {
    let buttonsntilink = [
    { buttonId: `-antilinkyoutubevideo on`, buttonText: { displayText: 'On' }, type: 1 },
    { buttonId: `-antilinkyoutubevideo off`, buttonText: { displayText: 'Off' }, type: 1 }
    ]
-   await Queen.sendButtonText(m.chat, buttonsntilink, `Please click the button below On / Off`, `${global.BotName}`, m)
+   await Queen.sendButtonText(m.chat, buttonsntilink, `*කරුණාකර on/off කිරීමට පහත බොත්තම ක්ලික් කරන්න*`, `${global.BotName}`, m)
    }
    }
    break
@@ -1995,27 +1995,27 @@ await Queen.sendMessage(m.chat, { delete: key })
  if (!isBotAdmins) return replay(mess.botadmin)
  if (!isAdmins && !isCreator) return replay(mess.useradmin)
  if (args[0] === "on") {
- if (AntiLinkYoutubeChannel) return replay('Already activated')
+ if (AntiLinkYoutubeChannel) return replay('*දැනටමත් ක්‍රියාත්මක කර ඇත*')
  ntilinkytch.push(from)
- replay('Activated youtube channel antilink !')
+ replay('*යූ ටියුබ් channel Antilink පද්ධතිය සක්‍රිය කර ඇත !*')
  var groupe = await Queen.groupMetadata(from)
  var members = groupe['participants']
  var mems = []
  members.map(async adm => {
  mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
  })
- Queen.sendMessage(from, {text: `\`\`\`「 Warning 」\`\`\`\n\nAntilink System Activated!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
+ Queen.sendMessage(from, {text: `\`\`\`「 Warning 」\`\`\`\n\n*Antilink පද්ධතිය සක්‍රිය කර ඇත !*`, contextInfo: { mentionedJid : mems }}, {quoted:m})
  } else if (args[0] === "off") {
- if (!AntiLinkYoutubeChannel) return replay('Already deactivated')
+ if (!AntiLinkYoutubeChannel) return replay('*දැනටමත් අක්‍රීය කර ඇත*')
  let off = ntilinkytch.indexOf(from)
  ntilinkytch.splice(off, 1)
- replay('Deactivated youtube channel antilink !')
+ replay('*යූ ටියුබ් channel Antilink පද්ධතිය අක්‍රීය කර ඇත !*')
  } else {
    let buttonsntilink = [
    { buttonId: `-antilinkyoutubech on`, buttonText: { displayText: 'On' }, type: 1 },
    { buttonId: `-antilinkyoutubech off`, buttonText: { displayText: 'Off' }, type: 1 }
    ]
-   await Queen.sendButtonText(m.chat, buttonsntilink, `Please click the button below On / Off`, `${global.BotName}`, m)
+   await Queen.sendButtonText(m.chat, buttonsntilink, `*කරුණාකර on/off කිරීමට පහත බොත්තම ක්ලික් කරන්න*`, `${global.BotName}`, m)
    }
    }
    break
@@ -2028,27 +2028,27 @@ await Queen.sendMessage(m.chat, { delete: key })
  if (!isBotAdmins) return replay(mess.botadmin)
  if (!isAdmins && !isCreator) return replay(mess.useradmin)
  if (args[0] === "on") {
- if (AntiLinkInstagram) return replay('Already activated')
+ if (AntiLinkInstagram) return replay('*දැනටමත් ක්‍රියාත්මක කර ඇත*')
  ntilinkig.push(from)
- replay('Activated instagram antilink !')
+ replay('*Instagram antilink පද්ධතිය සක්‍රිය කර ඇත !*')
  var groupe = await Queen.groupMetadata(from)
  var members = groupe['participants']
  var mems = []
  members.map(async adm => {
  mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
  })
- Queen.sendMessage(from, {text: `\`\`\`「 Warning 」\`\`\`\n\nAntilink System Activated!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
+ Queen.sendMessage(from, {text: `\`\`\`「 Warning 」\`\`\`\n\n*Antilink පද්ධතිය සක්‍රිය කර ඇත !*`, contextInfo: { mentionedJid : mems }}, {quoted:m})
  } else if (args[0] === "off") {
- if (!AntiLinkInstagram) return replay('Already deactivated')
+ if (!AntiLinkInstagram) return replay('*දැනටමත් අක්‍රීය කර ඇත*')
  let off = ntilinkig.indexOf(from)
  ntilinkig.splice(off, 1)
- replay('Deactivated instagram antilink !')
+ replay('*Instagram antilink පද්ධතිය අක්‍රීය කර ඇත !*')
  } else {
    let buttonsntilink = [
    { buttonId: `-antilinkinstagram on`, buttonText: { displayText: 'On' }, type: 1 },
    { buttonId: `-antilinkinstagram off`, buttonText: { displayText: 'Off' }, type: 1 }
    ]
-   await Queen.sendButtonText(m.chat, buttonsntilink, `Please click the button below On / Off`, `${global.BotName}`, m)
+   await Queen.sendButtonText(m.chat, buttonsntilink, `*කරුණාකර  on/off කිරීමට පහත බොත්තම ක්ලික් කරන්න*`, `${global.BotName}`, m)
    }
    }
    break
@@ -2060,27 +2060,27 @@ await Queen.sendMessage(m.chat, { delete: key })
  if (!isBotAdmins) return replay(mess.botadmin)
  if (!isAdmins && !isCreator) return replay(mess.useradmin)
  if (args[0] === "on") {
- if (AntiLinkFacebook) return replay('Already activated')
+ if (AntiLinkFacebook) return replay('*දැනටමත් ක්‍රියාත්මක කර ඇත*')
  ntilinkfb.push(from)
- replay('Activated facebook antilink !')
+ replay('*Facebook antilink පද්ධතිය සක්‍රිය කර ඇත !*')
  var groupe = await Queen.groupMetadata(from)
  var members = groupe['participants']
  var mems = []
  members.map(async adm => {
  mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
  })
- Queen.sendMessage(from, {text: `\`\`\`「 Warning 」\`\`\`\n\nAntilink System Activated!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
+ Queen.sendMessage(from, {text: `\`\`\`「 Warning 」\`\`\`\n\n*Antilink පද්ධතිය සක්‍රිය කර ඇත !*`, contextInfo: { mentionedJid : mems }}, {quoted:m})
  } else if (args[0] === "off") {
- if (!AntiLinkFacebook) return replay('Already deactivated')
+ if (!AntiLinkFacebook) return replay('දැනටමත් අක්‍රීය කර ඇත')
  let off = ntilinkfb.indexOf(from)
  ntilinkfb.splice(off, 1)
- replay('Deactivated facebook antilink !')
+ replay('*Facebook antilink පද්ධතිය අක්‍රීය කර ඇත !*')
  } else {
    let buttonsntilink = [
    { buttonId: `-antilinkfacebook on`, buttonText: { displayText: 'On' }, type: 1 },
    { buttonId: `-antilinkfacebook off`, buttonText: { displayText: 'Off' }, type: 1 }
    ]
-   await Queen.sendButtonText(m.chat, buttonsntilink, `Please click the button below On / Off `, `${global.BotName}`, m)
+   await Queen.sendButtonText(m.chat, buttonsntilink, `*කරුණාකර  on/off කිරීමට පහත බොත්තම ක්ලික් කරන්න*`, `${global.BotName}`, m)
    }
    }
    break
@@ -2093,27 +2093,27 @@ await Queen.sendMessage(m.chat, { delete: key })
  if (!isBotAdmins) return replay(mess.botadmin)
  if (!isAdmins && !isCreator) return replay(mess.useradmin)
  if (args[0] === "on") {
- if (AntiLinkTelegram) return replay('Already activated')
+ if (AntiLinkTelegram) return replay('*දැනටමත් ක්‍රියාත්මක කර ඇත*')
  ntilinktg.push(from)
- replay('Activated telegram antilink !')
+ replay('*Telegram antilink පද්ධතිය සක්‍රිය කර ඇත !*')
  var groupe = await Queen.groupMetadata(from)
  var members = groupe['participants']
  var mems = []
  members.map(async adm => {
  mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
  })
- Queen.sendMessage(from, {text: `\`\`\`「 Warning 」\`\`\`\n\nAntilink System Activated!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
+ Queen.sendMessage(from, {text: `\`\`\`「 Warning 」\`\`\`\n\n*Antilink පද්ධතිය සක්‍රිය කර ඇත !*`, contextInfo: { mentionedJid : mems }}, {quoted:m})
  } else if (args[0] === "off") {
- if (!AntiLinkTelegram) return replay('Already deactivated')
+ if (!AntiLinkTelegram) return replay('*දැනටමත් අක්‍රීය කර ඇත*')
  let off = ntilinkig.indexOf(from)
  ntilinkig.splice(off, 1)
- replay('Deactivated telegram antilink in this group')
+ replay('*මෙම සමූහයේ Telegram antilink පද්ධතිය අක්‍රීය කර ඇත*')
  } else {
    let buttonsntilink = [
    { buttonId: `-antilinktelegram on`, buttonText: { displayText: 'On' }, type: 1 },
    { buttonId: `-antilinktelegram off`, buttonText: { displayText: 'Off' }, type: 1 }
    ]
-   await Queen.sendButtonText(m.chat, buttonsntilink, `Please click the button below On / Off `, `${global.BotName}`, m)
+   await Queen.sendButtonText(m.chat, buttonsntilink, `*කරුණාකර on/off කිරීමට පහත බොත්තම ක්ලික් කරන්න*`, `${global.BotName}`, m)
    }
    }
    break
@@ -2126,27 +2126,27 @@ await Queen.sendMessage(m.chat, { delete: key })
  if (!isBotAdmins) return replay(mess.botadmin)
  if (!isAdmins && !isCreator) return replay(mess.useradmin)
  if (args[0] === "on") {
- if (AntiLinkTiktok) return replay('Already activated')
+ if (AntiLinkTiktok) return replay('*දැනටමත් ක්‍රියාත්මක කර ඇත*')
  ntilinktt.push(from)
- replay('Activated tiktok antilink !')
+ replay('*Tiktok antilink පද්ධතිය සක්‍රිය කර ඇත !*')
  var groupe = await Queen.groupMetadata(from)
  var members = groupe['participants']
  var mems = []
  members.map(async adm => {
  mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
  })
- Queen.sendMessage(from, {text: `\`\`\`「 Warning 」\`\`\`\n\nAntilink System Activated!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
+ Queen.sendMessage(from, {text: `\`\`\`「 Warning 」\`\`\`\n\n*Antilink පද්ධතිය සක්‍රිය කර ඇත !*`, contextInfo: { mentionedJid : mems }}, {quoted:m})
  } else if (args[0] === "off") {
- if (!AntiLinkTiktok) return replay('Already deactivated')
+ if (!AntiLinkTiktok) return replay('*දැනටමත් අක්‍රීය කර ඇත*')
  let off = ntilinktt.indexOf(from)
  ntilinktt.splice(off, 1)
- replay('Deactivated tiktok antilink !')
+ replay('*Tiktok antilink පද්ධතිය අක්‍රීය කර ඇත !*')
  } else {
    let buttonsntilink = [
    { buttonId: `-antilinktiktok on`, buttonText: { displayText: 'On' }, type: 1 },
    { buttonId: `-antilinktiktok off`, buttonText: { displayText: 'Off' }, type: 1 }
    ]
-   await Queen.sendButtonText(m.chat, buttonsntilink, `Please click the button below\n\nOn to enable\nOff to disable`, `${global.BotName}`, m)
+   await Queen.sendButtonText(m.chat, buttonsntilink, `කරුණාකර පහත බොත්තම් ක්ලික් කරන්න\n\non සක්‍රිය කිරීමට\noff අක්‍රිය කිරීමට`, `${global.BotName}`, m)
    }
    }
    break
@@ -2158,27 +2158,27 @@ await Queen.sendMessage(m.chat, { delete: key })
  if (!isBotAdmins) return replay(mess.botadmin)
  if (!isAdmins && !isCreator) return replay(mess.useradmin)
  if (args[0] === "on") {
- if (AntiLinkTwitter) return replay('Already activated')
+ if (AntiLinkTwitter) return replay('*දැනටමත් ක්‍රියාත්මක කර ඇත*')
  ntilinktwt.push(from)
- replay('Activated twitter antilink in this group !')
+ replay('*Twitter antilink පද්ධතිය සක්‍රිය කර ඇත !*')
  var groupe = await Queen.groupMetadata(from)
  var members = groupe['participants']
  var mems = []
  members.map(async adm => {
  mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
  })
- Queen.sendMessage(from, {text: `\`\`\`「 Warning 」\`\`\`\n\nAntilink System Activated!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
+ Queen.sendMessage(from, {text: `\`\`\`「 Warning 」\`\`\`\n\n*Antilink පද්ධතිය සක්‍රිය කර ඇත !*`, contextInfo: { mentionedJid : mems }}, {quoted:m})
  } else if (args[0] === "off") {
- if (!AntiLinkTwitter) return replay('Already deactivated')
+ if (!AntiLinkTwitter) return replay('*දැනටමත් අක්‍රීය කර ඇත*')
  let off = ntilinktwt.indexOf(from)
  ntilinktwt.splice(off, 1)
- replay('Deactivated twitter antilink !')
+ replay('*මෙම සමූහයේ Twitter antilink පද්ධතිය අක්‍රීය කර ඇත !*')
  } else {
    let buttonsntilink = [
    { buttonId: `-antilinktwt on`, buttonText: { displayText: 'On' }, type: 1 },
    { buttonId: `-antilinktwt off`, buttonText: { displayText: 'Off' }, type: 1 }
    ]
-   await Queen.sendButtonText(m.chat, buttonsntilink, `Please click the button below\n\nOn to enable\nOff to disable`, `${global.BotName}`, m)
+   await Queen.sendButtonText(m.chat, buttonsntilink, `කරුණාකර පහත බොත්තම් ක්ලික් කරන්න\n\non සක්‍රිය කිරීමට\noff අක්‍රිය කිරීමට`, `${global.BotName}`, m)
    }
    }
    break
@@ -2191,27 +2191,27 @@ await Queen.sendMessage(m.chat, { delete: key })
  if (!isBotAdmins) return replay(mess.botadmin)
  if (!isAdmins && !isCreator) return replay(mess.useradmin)
  if (args[0] === "on") {
- if (AntiLinkTwitter) return replay('Already activated')
+ if (AntiLinkTwitter) return replay('*දැනටමත් ක්‍රියාත්මක කර ඇත*')
  ntilinkall.push(from)
- replay('Enabled all antilink !')
+ replay('*සියලුම antilink පද්ධති සක්‍රීය කර ඇත !*')
  var groupe = await Queen.groupMetadata(from)
  var members = groupe['participants']
  var mems = []
  members.map(async adm => {
  mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
  })
- Queen.sendMessage(from, {text: `\`\`\`「 Warning 」\`\`\`\n\nAntilink System Activated!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
+ Queen.sendMessage(from, {text: `\`\`\`「 Warning 」\`\`\`\n\n*Antilink පද්ධතිය සක්‍රිය කර ඇත !*`, contextInfo: { mentionedJid : mems }}, {quoted:m})
  } else if (args[0] === "off") {
- if (!AntiLinkAll) return replay('Already deactivated')
+ if (!AntiLinkAll) return replay('*දැනටමත් අක්‍රීය කර ඇත*')
  let off = ntilinkall.indexOf(from)
  ntilinkall.splice(off, 1)
- replay('Disabled all antilink !')
+ replay('*සියලුම antilink පද්ධති අක්‍රීය කර ඇත !*')
  } else {
    let buttonsntilink = [
    { buttonId: `-antilinkall on`, buttonText: { displayText: 'On' }, type: 1 },
    { buttonId: `-antilinkall off`, buttonText: { displayText: 'Off' }, type: 1 }
    ]
-   await Queen.sendButtonText(m.chat, buttonsntilink, `Please click the button below\n\nOn to enable\nOff to disable`, `${global.BotName}`, m)
+   await Queen.sendButtonText(m.chat, buttonsntilink, `කරුණාකර පහත බොත්තම් ක්ලික් කරන්න\n\non සක්‍රිය කිරීමට\noff අක්‍රිය කිරීමට`, `${global.BotName}`, m)
    }
    }
    break
@@ -2224,9 +2224,9 @@ await Queen.sendMessage(m.chat, { delete: key })
  if (!isBotAdmins) return replay(mess.botadmin)
  if (!isAdmins && !isCreator) return replay(mess.useradmin)
  if (args[0] === "on") {
- if (antiWame) return replay('Already activated')
+ if (antiWame) return replay('දැනටමත් ක්‍රියාත්මක කර ඇත')
  ntwame.push(from)
- replay('Activated antiwame !')
+ replay('antiwame සක්‍රිය කර ඇත !')
  var groupe = await Queen.groupMetadata(from)
  var members = groupe['participants']
  var mems = []
@@ -2235,16 +2235,16 @@ await Queen.sendMessage(m.chat, { delete: key })
  })
  Queen.sendMessage(from, {text: `\`\`\`*「  Warning  」*\`\`\`\n\nAntilink is enabled!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
  } else if (args[0] === "off") {
- if (!antiWame) return replay('Already deactivated')
+ if (!antiWame) return replay('දැනටමත් අක්‍රීය කර ඇත')
  let off = nttoxic.indexOf(from)
  ntwame.splice(off, 1)
- replay('Deactivated antiwame !')
+ replay('antiwame අක්‍රීය කර ඇත !')
  } else {
    let buttonsntwame = [
    { buttonId: `-antiwame on`, buttonText: { displayText: 'On' }, type: 1 },
    { buttonId: `-antiwame off`, buttonText: { displayText: 'Off' }, type: 1 }
    ]
-   await Queen.sendButtonText(m.chat, buttonsntwame, `Please click the button below\n\nOn to enable\nOff to disable`, `${global.BotName}`, m)
+   await Queen.sendButtonText(m.chat, buttonsntwame, `කරුණාකර පහත බොත්තම් ක්ලික් කරන්න\n\non සක්‍රිය කිරීමට\noff අක්‍රිය කිරීමට`, `${global.BotName}`, m)
    }
    }
    break
@@ -2257,27 +2257,27 @@ await Queen.sendMessage(m.chat, { delete: key })
  if (!isBotAdmins) return replay(mess.botadmin)
  if (!isAdmins && !isCreator) return replay(mess.useradmin)
  if (args[0] === "on") {
- if (AntiNsfw) return replay('Already activated')
+ if (AntiNsfw) return replay('දැනටමත් ක්‍රියාත්මක කර ඇත')
  ntnsfw.push(from)
- replay('Enabled NSFW Commands!')
+ replay('NSFW විධාන සක්‍රීය කර ඇත!')
  var groupe = await Queen.groupMetadata(from)
  var members = groupe['participants']
  var mems = []
  members.map(async adm => {
  mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
  })
- Queen.sendMessage(from, {text: `\`\`\`「 Notice 」\`\`\`\n\nNSFW(not safe for work) feature has been enabled in this group, which means anyone here can accesss Adult commands!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
+ Queen.sendMessage(from, {text: `\`\`\`「 Notice 」\`\`\`\n\nමෙම සමූහය තුළ  NSFW විශේෂාංගය සක්‍රීය කර ඇත.(එය ආරක්ෂිත නොවේ..) එයින් අදහස් වන්නේ මෙහි සිටින ඕනෑම කෙනෙකුට Adult විධානවලට ප්‍රවේශ විය හැකි බවයි!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
  } else if (args[0] === "off") {
- if (!AntiNsfw) return replay('Already deactivated')
+ if (!AntiNsfw) return replay('දැනටමත් අක්‍රීය කර ඇත')
  let off = ntnsfw.indexOf(from)
  ntnsfw.splice(off, 1)
- replay('Disabled NSFW Commands!')
+ replay('NSFW විධාන අක්‍රීය කර ඇත!')
  } else {
    let buttonsntnsfw = [
    { buttonId: `-nsfw on`, buttonText: { displayText: 'On' }, type: 1 },
    { buttonId: `-nsfw off`, buttonText: { displayText: 'Off' }, type: 1 }
    ]
-   await Queen.sendButtonText(m.chat, buttonsntnsfw, `Please click the button below\n\nOn to enable\nOff to disable`, `${global.BotName}`, m)
+   await Queen.sendButtonText(m.chat, buttonsntnsfw, `කරුණාකර පහත බොත්තම් ක්ලික් කරන්න\n\non සක්‍රිය කිරීමට\noff අක්‍රිය කිරීමට`, `${global.BotName}`, m)
    }
    }
    break
@@ -2287,7 +2287,7 @@ await Queen.sendMessage(m.chat, { delete: key })
     if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)
 if (!isCreator) return replay(mess.botowner)
-if (!args[0]) return replay(`Select add or del (add to ban, del to unban), For Example: Reply *${prefix}ban add* to the user you want to ban.`)
+if (!args[0]) return replay(`add හෝ del තෝරන්න (add to ban, del to unban), ඒ සදහා උදාහරණයක් ලෙස: Reply *${prefix}ban add* ඔබට තහනම් කිරීමට අවශ්‍ය පරිශීලකයා.`)
 if (args[1]) {
 orgnye = args[1] + "@s.whatsapp.net"
 } else if (m.quoted) {
@@ -2295,14 +2295,14 @@ orgnye = m.quoted.sender
 }
 const isBane = banUser.includes(orgnye)
 if (args[0] === "add") {
-if (isBane) return ads('User is already banned.')
+if (isBane) return ads('පරිශීලකයා දැනටමත් තහනම් කර ඇත.')
 banUser.push(orgnye)
 replay(`Successfully Banned the user.`)
 } else if (args[0] === "del") {
-if (!isBane) return ads('User is already unbanned.')
+if (!isBane) return ads('පරිශීලකයා සාර්ථකව තහනම් කරන ලදී.')
 let delbans = banUser.indexOf(orgnye)
 banUser.splice(delbans, 1)
-replay(`Successfully Unbanned the user.`)
+replay(`පරිශීලකයාගේ තහනම සාර්ථකව ඉවත් කරන ලදී.`)
 } else {
 replay("Error")
 }
@@ -2325,7 +2325,7 @@ case 'listonline': case 'listaktif': case 'here':{
     if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)
 if (!isCreator) return replay(mess.botowner)
-if (!args[0]) return replay(`Select add or del (add to ban, del to unban), For Example: Reply *${prefix}ban add* to the user you want to ban.`)
+if (!args[0]) return replay(`add හෝ del තෝරන්න (add to ban, del to unban), ඒ සදහා උදාහරණයක් ලෙස: Reply *${prefix}ban add* ඔබට තහනම් කිරීමට අවශ්‍ය පරිශීලකයා.`)
 if (args[1]) {
 orgnye = args[1] + "@s.whatsapp.net"
 } else if (m.quoted) {
@@ -2333,14 +2333,14 @@ orgnye = m.quoted.sender
 }
 const isBane = banUser.includes(orgnye)
 if (args[0] === "add") {
-if (isBane) return ads('User was already banned.')
+if (isBane) return ads('පරිශීලකයා දැනටමත් තහනම් කර ඇත.')
 banUser.push(orgnye)
-replay(`Successfully banned the user`)
+replay(`පරිශීලකයා සාර්ථකව තහනම් කරන ලදී`)
 } else if (args[0] === "del") {
-if (!isBane) return ads('User was already unbanned.')
+if (!isBane) return ads('පරිශීලකයා දැනටමත් තහනම් කිරීම ඉවත් කර ඇත.')
 let delbans = banUser.indexOf(orgnye)
 banUser.splice(delbans, 1)
-replay(`Successfully unbanned the user.`)
+replay(`පරිශීලකයාගේ තහනම සාර්ථකව ඉවත් කරන ලදී.`)
 } else {
 replay("Error")
 }
@@ -2351,7 +2351,7 @@ break
 case 'happymod': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
- if (!args.join(" ")) return replay(`Example : ${prefix + command} Kinemaster`)
+ if (!args.join(" ")) return replay(`උදාහරණයක් ලෙස : ${prefix + command} Kinemaster`)
  yogipw.happymod(args.join(" ")).then(async(res) => {
  teks = '```「 HappyMod Search Engine 」```'
  for (let i of res) {
@@ -2377,10 +2377,10 @@ case 'happymod': {
  case 'yts': case 'ytsearch': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
- if (!args.join(" ")) return replay(`Example : -yts Heat waves`)
+ if (!args.join(" ")) return replay(`උදාහරණයක් ලෙස : -yts Heat waves`)
  let yts = require("yt-search")
  let search = await yts(args.join(" "))
- let teks = '```「 YouTube search Engine 」```\n\n Search Term: '+text+'\n\n'
+ let teks = '```「 YouTube search Engine 」```\n\n සෙවුම් පදය: '+text+'\n\n'
  let no = 1
  for (let i of search.all) {
  teks += `Result No : ${no++}\n\nTitle : ${i.title}\n\nViews : ${i.views}\n\nDuration : ${i.timestamp}\n\nUploaded : ${i.ago}\n\nAuthor : ${i.author.name}\n\nUrl : ${i.url}\n\n\n-----------------------------------------------------------------------------\n\n\n`
@@ -2718,7 +2718,7 @@ let mentioned = participants.map(v => v.jid)
      case 'volume': {
         if (isBan) return reply(mess.banned)	 			
      if (isBanChat) return reply(mess.bangc)
-     if (!args.join(" ")) return reply(`Example: ${prefix + command} 10`)
+     if (!args.join(" ")) return reply(`උදාහරණයක් ලෙස: ${prefix + command} 10`)
      media = await Queen.downloadAndSaveMediaMessage(quoted, "volume")
      if (isQuotedAudio) {
      rname = getRandom('.mp3')
@@ -2747,7 +2747,7 @@ let mentioned = participants.map(v => v.jid)
      case 'tempo': {
         if (isBan) return reply(mess.banned)
         if (isBanChat) return reply(mess.bangc)
-        if (!args.join(" ")) return reply(`Example: ${prefix + command} 10`)
+        if (!args.join(" ")) return reply(`උදාහරණයක් ලෙස: ${prefix + command} 10`)
         var req = args.join(' ')
         media = await Queen.downloadAndSaveMediaMessage(quoted, "tempo")
         if (isQuotedAudio) {
@@ -2810,7 +2810,7 @@ let mentioned = participants.map(v => v.jid)
 case 'calculator': case 'cal': case 'calculate':{
    if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)
-if (args.length < 1) return reply(`*Example :*\n${prefix}calculator 2*5\n\n`)
+if (args.length < 1) return reply(`*උදාහරණයක් ලෙස :*\n${prefix}calculator 2*5\n\n`)
 let qsd = args.join(" ")
 if (typeof mathjs.evaluate(qsd) !== 'number') {
 reply('Error')
@@ -2845,7 +2845,7 @@ case 'toimage': case 'toimg': {
    if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)
 if (!m.quoted) return reply('Reply Image')
-if (!/webp/.test(mime)) return reply(`Reply sticker with caption *${prefix + command}*`)
+if (!/webp/.test(mime)) return reply(`Caption එක සහිත ස්ටිකරය Reply කරන්න *${prefix + command}*`)
 reply(mess.waiting)
 let media = await Queen.downloadAndSaveMediaMessage(quoted)
 let ran = await getRandom('.png')
@@ -2863,7 +2863,7 @@ case 'tomp4': case 'tovideo': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  if (!m.quoted) return reply('Reply Image')
- if (!/webp/.test(mime)) return reply(`Reply sticker with caption *${prefix + command}*`)
+ if (!/webp/.test(mime)) return reply(`Caption එක සහිත ස්ටිකරය Reply කරන්න *${prefix + command}*`)
  reply(mess.waiting)
  let { webp2mp4File } = require('./lib/uploader')
  let media = await Queen.downloadAndSaveMediaMessage(quoted)
@@ -2876,8 +2876,8 @@ case 'tomp4': case 'tovideo': {
 case 'toaud': case 'toaudio': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
- if (!/video/.test(mime) && !/audio/.test(mime)) return reply(`Send/Reply Video/Audio You Want To Use As Audio With Caption ${prefix + command}`)
- if (!m.quoted) return reply(`Send/Reply Video/Audio You Want To Use As Audio With Caption ${prefix + command}`)
+ if (!/video/.test(mime) && !/audio/.test(mime)) return reply(`ඔබට Audio ලෙස භාවිත කිරීමට අවශ්‍ය Video/Audio, Caption එක සමග යවන්න ${prefix + command}`)
+ if (!m.quoted) return reply(`ඔබට Audio ලෙස භාවිත කිරීමට අවශ්‍ය Video/Audio, Caption එක සමග යවන්න ${prefix + command}`)
  reply(mess.waiting)
  let media = await quoted.download()
  let { toAudio } = require('./lib/converter')
@@ -2889,9 +2889,9 @@ break
 case 'tomp3': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
- if (/document/.test(mime)) return reply(`Send/Reply Video/Audio You Want To Convert Into MP3 With Caption ${prefix + command}`)
- if (!/video/.test(mime) && !/audio/.test(mime)) return reply(`Send/Reply Video/Audio You Want To Convert Into MP3 With Caption ${prefix + command}`)
- if (!m.quoted) return reply(`Send/Reply Video/Audio You Want To Convert Into MP3 With Caption ${prefix + command}`)
+ if (/document/.test(mime)) return reply(`ඔබට MP3 බවට පරිවර්තනය කිරීමට අවශ්‍ය Audio/Video යවන්න සිරස්තල සහිතව ${prefix + command}`)
+ if (!/video/.test(mime) && !/audio/.test(mime)) return reply(`ඔබට MP3 බවට පරිවර්තනය කිරීමට අවශ්‍ය Audio/Video යවන්න සිරස්තල සහිතව ${prefix + command}`)
+ if (!m.quoted) return reply(`ඔබට MP3 බවට පරිවර්තනය කිරීමට අවශ්‍ය Audio/Video යවන්න සිරස්තල සහිතව ${prefix + command}`)
  reply(mess.waiting)
  let media = await quoted.download()
  let { toAudio } = require('./lib/converter')
@@ -2905,12 +2905,12 @@ case 'togif': case 'getgif':{
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  if (!m.quoted) return reply('Reply Image')
- if (!/webp/.test(mime)) return reply(`Reply sticker with caption *${prefix + command}*`)
+ if (!/webp/.test(mime)) return reply(`සිරස්තල සහිත පිළිතුරු ස්ටිකරය *${prefix + command}*`)
  reply(mess.wait)
  let { webp2mp4File } = require('./lib/uploader')
  let media = await Queen.downloadAndSaveMediaMessage(quoted)
  let webpToMp4 = await webp2mp4File(media)
- await Queen.sendMessage(m.chat, { video: { url: webpToMp4.result, caption: 'Converted From Webp To Gif' }, gifPlayback: true }, { quoted: m })
+ await Queen.sendMessage(m.chat, { video: { url: webpToMp4.result, caption: 'Webp සිට Gif දක්වා පරිවර්තනය කරන ලදී' }, gifPlayback: true }, { quoted: m })
  await fs.unlinkSync(media)
  }
  break
@@ -2941,11 +2941,11 @@ case 'togif': case 'getgif':{
 
 case 'translate': case 'trans': {
     if (isBan) return reply(mess.banned)
-    if (!args.join(" ")) return replay("Pls enter any text to translate")
+    if (!args.join(" ")) return replay("කරුණාකර පරිවර්තනය කිරීමට පෙළක් ඇතුළත් කරන්න")
     tes = await fetchJson (`https://megayaa.herokuapp.com/api/translate?to=en&kata=${args.join(" ")}`)
     Infoo = tes.info
     Detek = tes.translate
-    replay(`Input : ${Detek}\nTranslation Results : ${Infoo}`)
+    replay(`Input : ${Detek}\nපරිවර්තන ප්‍රතිඵල : ${Infoo}`)
     }
     break
 
@@ -2980,10 +2980,10 @@ break
 case 'google': case 'search': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
- if (!args[0]) return reply(`Example: ${prefix + command} <query>\nUses : ${prefix + command} ආදරය කුමක් ද`)
+ if (!args[0]) return reply(`උදාහරණයක් ලෙස: ${prefix + command} <query>\nUses : ${prefix + command} ආදරය කුමක් ද`)
  let google = require('google-it')
  google({'query': args.join(" ")}).then(res => {
- let teks = `「 *Google Search Engine* 」\n\n*Search term:* ${text}\n\n\n`
+ let teks = `「 *Google Search Engine* 」\n\n*සෙවුම් පදය:* ${text}\n\n\n`
  for (let g of res) {
  teks += `*Title* : ${g.title}\n\n`
  teks += `*Description* : ${g.snippet}\n\n`
@@ -2997,7 +2997,7 @@ case 'google': case 'search': {
  case 'igdl': case 'instagram': case 'instagramreels': case 'igreels': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
- if (!args[0]) return reply(`Example :\n${prefix + command} https://www.instagram.com`)
+ if (!args[0]) return reply(`උදාහරණයක් ලෙස :\n${prefix + command} https://www.instagram.com`)
  try {
  hx.igdl(args[0]).then(async(resed) => {
  ini_anu = []
@@ -3048,7 +3048,7 @@ break
 case 'mp4' : {
     if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)
-if (!args[0]) return reply(`Pls provide link!`)
+if (!args[0]) return reply(`කරුණාකර Link එකක් ලබා දෙන්න!`)
 try {
 Queen.sendMessage(from, {video:{url:args[0]}, caption:"Succes!", contextInfo:{externalAdReply:{
 title:`${global.BotName}`,
@@ -3067,7 +3067,7 @@ break
 case 'jpeg': {
     if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)
- if (!args[0]) return reply(`කරුණාකර Link එක සපයන්න!`)
+ if (!args[0]) return reply(`කරුණාකර Link එකක් ලබා දෙන්න!`)
  try {
  Queen.sendMessage(from, {image:{url:args[0]}, caption:"Success!"}, {quoted:m})
  } catch {
@@ -3081,7 +3081,7 @@ if (isBanChat) return reply(mess.bangc)
  if (isBanChat) return reply(mess.bangc)
                  if (!text) return reply(`කරුණාකර Link එක සපයන්න!`)
                  const { instagramdl, instagramdlv2, instagramdlv3 } = require('@bochilteam/scraper')
-                 if (!isUrl(args[0]) && !args[0].includes('instagram.com')) return reply('*Invalid link!*')
+                 if (!isUrl(args[0]) && !args[0].includes('instagram.com')) return reply('*වලංගු නොවන Link එකක්!*')
                  instagramdlv3(`${text}`).then(async (data) => {            
                  var buf = await getBuffer(data[0].thumbnail)        
                  Queen.sendMessage(m.chat, { video: { url: data[0].url }, jpegThumbnail:buf, caption: `${BotName}`}, { quoted: m })
@@ -3095,7 +3095,7 @@ case 'twitter': case 'td': case 'twitterdl': {
    if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)	             
              if (!text) return reply(`කරුණාකර Link එක සපයන්න!`)
-                if (!isUrl(args[0]) && !args[0].includes('twitter.com')) return reply(`*Invalid link!*`)
+                if (!isUrl(args[0]) && !args[0].includes('twitter.com')) return reply(`*වලංගු නොවන Link එකක්!*`)
                 xfarrapi.Twitter(`${text}`).then(async (data) => {                    
                     let txt = `「 _Twitter Downloader_ 」\n\n`
                     txt += `*Title :* ${data.title}\n`
@@ -3120,7 +3120,7 @@ case 'twittermp3': case 'twitteraudio': {
    if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)	             
              if (!text) return reply(`කරුණාකර Link එක සපයන්න!`)
-                if (!isUrl(args[0]) && !args[0].includes('twitter.com')) return reply(`*Invalid link!*`)
+                if (!isUrl(args[0]) && !args[0].includes('twitter.com')) return reply(`*වලංගු නොවන Link එකක්!*`)
                 xfarrapi.Twitter(`${text}`).then(async (data) => {
                 Queen.sendMessage(m.chat, { audio: { url: data.medias[1].url }, mimetype: 'audio/mp4'}, { quoted: m })
                 }).catch((err) => {
@@ -3132,7 +3132,7 @@ if (isBanChat) return reply(mess.bangc)
 case 'twitterxx': case 'twdlxx': case 'twmp4xx': {
    if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)
-if (!args[0]) return reply(`Example :\n${prefix + command} https://twitter.com/cinema21/status/1517754155644821504?t=rUnbyqwh4vAE1QXMXlsVeQ&s=19`)
+if (!args[0]) return reply(`උදාහරණයක් ලෙස :\n${prefix + command} https://twitter.com`)
 try {
 let lotwit = await aiovideodl(args[0])
 teks = `「 _Twitter Downloader_ 」
@@ -3181,8 +3181,8 @@ case 'twddlxx': {
  case 'fbdl': case 'fb': case 'facebook': case 'fbmp4': {     	    
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
-              if (!text) return reply(`කරුණාකර Link එක ලබා දෙන්න!\n\nExample: ${prefix}facebook https://www.facebook.com`)
-                 if (!isUrl(args[0]) && !args[0].includes('facebook.com')) return reply(`Invalid link!`)
+              if (!text) return reply(`කරුණාකර Link එක ලබා දෙන්න!\n\nඋදාහරණයක් ලෙස: ${prefix}facebook https://www.facebook.com`)
+                 if (!isUrl(args[0]) && !args[0].includes('facebook.com')) return reply(`වලංගු නොවන Link එකක්!`)
              let bocil = require('@bochilteam/scraper')  
                  bocil.facebookdlv2(`${text}`).then(async (data) => {                   
                      let txt = `「 _Facebook Downloader_ 」\n\n`
@@ -3204,8 +3204,8 @@ case 'twddlxx': {
 case 'fbmp3': case 'facebookmp3': case 'facebookaudio': {
    if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)
-                  if (!text) return reply(`කරුණාකර Link එක ලබා දෙන්න!\n\nExample: ${prefix + command} https://www.facebook.com`)
-                  if (!isUrl(args[0]) && !args[0].includes('facebook.com')) return reply(`Invalid link!`)
+                  if (!text) return reply(`කරුණාකර Link එක ලබා දෙන්න!\n\nඋදාහරණයක් ලෙස: ${prefix + command} https://www.facebook.com`)
+                  if (!isUrl(args[0]) && !args[0].includes('facebook.com')) return reply(`වලංගු නොවන Link එකක්!`)
   let noh = require('@bochilteam/scraper')                
   noh.savefrom(`${text}`).then(async (anu) => {  
   Queen.sendMessage(m.chat, { audio: { url: anu.url[0].url }, mimetype: 'audio/mp4' }, { quoted: m })      
@@ -3219,7 +3219,7 @@ if (isBanChat) return reply(mess.bangc)
 case 'facebookxx': case 'fbdlxxx': case 'fbmp4xxx': case 'fbxxx': {
    if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)
-if (!args[0]) return reply(`Example :\n${prefix + command} https://fb.watch`)
+if (!args[0]) return reply(`උදාහරණයක් ලෙස :\n${prefix + command} https://fb.watch`)
 try {
 let resd = await aiovideodl(args[0])
 teks = `「 _Facebook Downloader_ 」
@@ -3249,7 +3249,7 @@ case 'fbddlxx': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  let buttons = [
- {buttonId: `-menu`, buttonText: {displayText: '✨Menu✨'}, type: 1}
+ {buttonId: `-menu`, buttonText: {displayText: '✨Ｍｅｎｕ✨'}, type: 1}
  ]
  let buttonMessage = {
  video: {url:args[0]},
@@ -3268,13 +3268,13 @@ case 'fbddlxx': {
   if (isBanChat) return reply(mess.bangc)
 if (!q) return reply('කරුණාකර Link එක ලබා දෙන්න !')
 reply(mess.wait)
-if (!q.includes('tiktok')) return reply(`Invalid tiktok link!`)
+if (!q.includes('tiktok')) return reply(`වලංගු නොවන ටික්ටොක් සබැඳියක්!`)
  const musim_rambutan = await QueenTiktok(`${q}`).catch(e => {
 reply(mess.error) 
 } )
  console.log(musim_rambutan)
  const Queentiktokop = musim_rambutan.result.watermark
-texttk = `_Please choose the button below_`
+texttk = `_කරුණාකර පහත බොත්තම තෝරන්න_`
 let buttons = [
 {buttonId: `-ttnowm ${q}`, buttonText: {displayText: 'Watermark Free'}, type: 1},
 {buttonId: `-ttaud ${q}`, buttonText: {displayText: 'Audio '}, type: 1}
@@ -3296,7 +3296,7 @@ case 'tiktoknowm': case 'ttnowm':{
   if (isBanChat) return reply(mess.bangc)
 if (!q) return reply('කරුණාකර Link එක ලබා දෙන්න !')
 reply(mess.wait)
-if (!q.includes('tiktok')) return reply(`That's not a tiktok link!`)
+if (!q.includes('tiktok')) return reply(`ඒක ටික්ටොක් ලින්ක් එකක් නෙවෙයි!`)
  const musim_rambutan = await QueenTiktok(`${q}`).catch(e => {
 reply(mess.error) 
 } )
@@ -3334,12 +3334,12 @@ case 'play2': case 'ytplay2': {
     let anu = search.videos[Math.floor(Math.random() * search.videos.length)]
     let ytvc = await hx.youtube(anu.url)
     let buttons = [
-    {buttonId: `-ytmp4 ${anu.url}`, buttonText: {displayText: '► Video'}, type: 1},
-    {buttonId: `-ytmp3 ${anu.url}`, buttonText: {displayText: '♫ Audio'}, type: 1}
+    {buttonId: `-ytmp4 ${anu.url}`, buttonText: {displayText: '🎦 Video 🎦'}, type: 1},
+    {buttonId: `-ytmp3 ${anu.url}`, buttonText: {displayText: '🎧 Audio 🎧'}, type: 1}
                     ]
                     let buttonMessage = {
                         image: { url: anu.thumbnail},
-                        caption: `「 _Queen Youtube Player_ 」
+                        caption: `「 _𝗤𝘂𝗲𝗲𝗻 𝗬𝗼𝘂𝘁𝘂𝗯𝗲 𝗣𝗹𝗮𝘆𝗲𝗿_ 」
 
     Title : ${anu.title}
     ID : ${anu.videoId}
@@ -3365,14 +3365,14 @@ case 'ytdl2': case 'yt2': case 'youtube2':{
 if (!args[0]) return reply(mess.nolink)
 try {
 hx.youtube(args[0]).then(async(res) => {
-textyt = `「 _Queen Youtube Downloader_ 」
+textyt = `「 _𝗤𝘂𝗲𝗲𝗻 𝗬𝗼𝘂𝘁𝘂𝗯𝗲 𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱𝗲𝗿_ 」
 Title : ${res.title}
 Size : ${res.size}
 Quality : ${res.quality}
 _Select video or audio and wait a while_`
 let buttons = [
-{buttonId: `-ytmp4 ${res.link}`, buttonText: {displayText: '► Video'}, type: 1},
-{buttonId: `-ytmp3 ${res.link}`, buttonText: {displayText: '♫ Audio'}, type: 1}
+{buttonId: `-ytmp4 ${res.link}`, buttonText: {displayText: '🎦 Video 🎦'}, type: 1},
+{buttonId: `-ytmp3 ${res.link}`, buttonText: {displayText: '🎧 Audio 🎧'}, type: 1}
 ]
 let buttonMessage = {
 image: {url:res.thumb},
@@ -3385,7 +3385,7 @@ headerType: 4,
 Queen.sendMessage(from, buttonMessage, {quoted:m})
 }).catch(_ => _)
 } catch {
-reply("Error link!")
+reply("දෝෂ සහිත සබැඳියකි!")
 }
 }
 break
@@ -3398,12 +3398,12 @@ case 'music': case 'play': case 'song': case 'ytplay': {
  let anu = search.videos[Math.floor(Math.random() * search.videos.length)]
  let ytvc = await hx.youtube(anu.url)
  let buttons = [
- {buttonId: `-ytvd ${ytvc.link}`, buttonText: {displayText: '► Video'}, type: 1},
- {buttonId: `-ytad ${ytvc.mp3}`, buttonText: {displayText: '♫ Audio'}, type: 1}
+ {buttonId: `-ytvd ${ytvc.link}`, buttonText: {displayText: '🎦 Video 🎦'}, type: 1},
+ {buttonId: `-ytad ${ytvc.mp3}`, buttonText: {displayText: '🎧 Audio 🎧'}, type: 1}
  ]
  let buttonMessage = {
  image: { url: anu.thumbnail },
- caption: `「  _Queen Youtube Player_  」
+ caption: `「  _𝗤𝘂𝗲𝗲𝗻 𝗬𝗼𝘂𝘁𝘂𝗯𝗲 𝗣𝗹𝗮𝘆𝗲𝗿_  」
 
 *Title :* ${anu.title}
 *Duration :* ${anu.timestamp}
@@ -3426,14 +3426,14 @@ case 'music': case 'play': case 'song': case 'ytplay': {
  if (!args[0]) return reply(mess.nolink)
  try {
  hx.youtube(args[0]).then(async(res) => {
- textyt = `「  _Queen Youtube Downloader_  」
+ textyt = `「  _𝗤𝘂𝗲𝗲𝗻 𝗬𝗼𝘂𝘁𝘂𝗯𝗲 𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱𝗲𝗿_  」
 *Title :* ${res.title}
 *Size :* ${res.size}
 *Quality :* ${res.quality}
 *Select video or audio and wait a while*`
  let buttons = [
- {buttonId: `-ytvd ${res.link}`, buttonText: {displayText: '► Video'}, type: 1},
- {buttonId: `-ytad ${res.mp3}`, buttonText: {displayText: '♫ Audio'}, type: 1}
+ {buttonId: `-ytvd ${res.link}`, buttonText: {displayText: '🎦 Video 🎦'}, type: 1},
+ {buttonId: `-ytad ${res.mp3}`, buttonText: {displayText: '🎧 Audio 🎧'}, type: 1}
  ]
  let buttonMessage = {
  image: {url:res.thumb},
@@ -3469,7 +3469,7 @@ case 'music': case 'play': case 'song': case 'ytplay': {
  case 'ytshorts': case 'shorts': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
-   if (!text) return reply(`*Use ${prefix + command} put yt shorts link*`)
+   if (!text) return reply(` ${prefix + command} youtube shorts link එක දාන්න*`)
    if (!isUrl(args[0]) && !args[0].includes('youtube')) return reply(`ඔබ ලබා දුන් link එක වලංගු නැත!`)
    xfarrapi.Youtube(`${text}`).then(async (data) => {
    if (data.medias[0].formattedSize.split('MB')[0] >= 999) return reply('*File Over Limit* '+util.format(data)) 
