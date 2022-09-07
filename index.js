@@ -108,11 +108,11 @@ Queen.ev.on('groups.update', async pea => {
        }
        let wm_fatih = { url : ppgc }
        if (pea[0].announce == true) {
-       Queen.send5ButImg(pea[0].id, `Grop has been *Closed!* Only *Admins* can send Messages!`, `${BotName}`, wm_fatih, [])
+       Queen.send5ButImg(pea[0].id, `Group එක *වසා ඇත!* පණිවිඩ යැවිය හැක්කේ *පරිපාලකයින්ට* පමණි!`, `${BotName}`, wm_fatih, [])
        } else if(pea[0].announce == false) {
-       Queen.send5ButImg(pea[0].id, `Grop has been *Opened!* Now *Everyone* can send Messages!`, `${BotName}`, wm_fatih, [])
+       Queen.send5ButImg(pea[0].id, `Group එක *විවෘත කර ඇත!* දැන් *සෑම කෙනෙකුටම* පණිවිඩ යැවිය හැක!`, `${BotName}`, wm_fatih, [])
        } else {
-       Queen.send5ButImg(pea[0].id, `Group Subject has been updated to *${pea[0].subject}*`, `${BotName}`, wm_fatih, [])
+       Queen.send5ButImg(pea[0].id, `Group Subject යාවත්කාලීන කර ඇත ලෙස *${pea[0].subject}*`, `${BotName}`, wm_fatih, [])
      }
     })
 */
